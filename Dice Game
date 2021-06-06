@@ -1,0 +1,23 @@
+import random
+min = 1
+max = 6
+
+roll_again = "yes"
+
+count = 1
+while (roll_again == "yes" or roll_again == "y"):
+    count = count + 1
+    
+    one=random.randint(min, max)
+    two=random.randint(min, max)
+    print("Try #1")
+    print("Die 1: : " + str(one))
+    print("Die 2: : " + str(two))
+    
+    if (one==two):
+        print("You've rolled a double!")
+        break;
+    else:
+        print(" ")
+        roll_again = raw_input("Roll the dices again?")
+    
