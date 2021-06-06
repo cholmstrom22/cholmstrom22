@@ -1,0 +1,95 @@
+#Thank you for such a great year! Can't wait for next year! -Caitlyn
+
+
+import simplegui
+x = 0 
+xstep = .5
+bstepy = 2
+nstep = -.5
+n = 0
+
+def draw(canvas):
+    global xstep, bstepy, x, nstep, n
+    x = x + xstep
+    n = n + nstep
+    
+    #T 
+    canvas.draw_line((x+100+xstep, 120), (x+100+xstep, 200), 10, "Yellow")
+    canvas.draw_line((x+75+xstep, 125), (x+120+xstep, 125), 10, "Yellow") 
+    #H
+    canvas.draw_line((x+130+xstep, 200), (x+130+xstep, 120), 10, "Yellow")
+    canvas.draw_line((x+130+xstep, 160), (x+160+xstep, 160), 10, "Yellow")
+    canvas.draw_line((x+160+xstep, 200), (x+160+xstep, 120), 10, "Yellow")
+    #A
+    canvas.draw_line((x+180+xstep, 200), (x+200+xstep, 120), 10, "Yellow")
+    canvas.draw_line((x+220+xstep, 200), (x+200+xstep, 120), 10, "Yellow")
+    canvas.draw_line((x+190+xstep, 160), (x+210+xstep, 160), 10, "Yellow")
+    #N
+    canvas.draw_line((x+240+xstep, 200), (x+240+xstep, 120), 10, "Yellow")
+    canvas.draw_line((x+240+xstep, 120), (x+270+xstep, 200), 10, "Yellow")
+    canvas.draw_line((x+270+xstep, 200), (x+270+xstep, 120), 10, "Yellow")
+    #K
+    canvas.draw_line((x+290+xstep, 200), (x+290+xstep, 120), 10, "Yellow")
+    canvas.draw_line((x+290+xstep, 160), (x+320+xstep, 120), 10, "Yellow")
+    canvas.draw_line((x+290+xstep, 160), (x+320+xstep, 200), 10, "Yellow")
+    
+    
+    #360
+    #Y
+    canvas.draw_line((x+380+xstep, 200), (x+380+xstep, 150), 10, "Yellow")
+    canvas.draw_line((x+360+xstep, 120), (x+380+xstep, 155), 10, "Yellow")
+    canvas.draw_line((x+400+xstep, 120), (x+380+xstep, 155), 10, "Yellow")
+    #O
+    canvas.draw_circle((x+440, 160), 35, 10, "Yellow", "Mediumblue")
+    #U
+    canvas.draw_line((x+495+xstep, 120), (x+495+xstep, 200), 10, "Yellow")
+    canvas.draw_line((x+490+xstep, 200), (x+530+xstep, 200), 10, "Yellow")
+    canvas.draw_line((x+530+xstep, 120), (x+530+xstep, 205), 10, "Yellow")
+    
+    
+    #M
+    canvas.draw_line((n+230+xstep, 300), (n+230+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+228+xstep, 300), (n+260+xstep, 340), 10, "Yellow")
+    canvas.draw_line((n+260+xstep, 340), (n+290+xstep, 300), 10, "Yellow")
+    canvas.draw_line((n+290+xstep, 300), (n+290+xstep, 380), 10, "Yellow")
+    #R
+    canvas.draw_line((n+320+xstep, 300), (n+320+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+320+xstep, 300), (n+350+xstep, 330), 10, "Yellow")
+    canvas.draw_line((n+355+xstep, 330), (n+320+xstep, 350), 10, "Yellow")
+    canvas.draw_line((n+320+xstep, 350), (n+350+xstep, 380), 10, "Yellow")
+    canvas.draw_circle((n+370, 375), 2, 2, "Yellow", "Yellow")
+    
+    #Y
+    canvas.draw_line((n+420+xstep, 340), (n+420+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+420+xstep, 340), (n+395+xstep, 300), 10, "Yellow")
+    canvas.draw_line((n+420+xstep, 340), (n+445+xstep, 300), 10, "Yellow")
+    #U
+    canvas.draw_line((n+465+xstep, 300), (n+465+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+460+xstep, 380), (n+495+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+495+xstep, 385), (n+495+xstep, 300), 10, "Yellow")
+    #E
+    canvas.draw_line((n+520+xstep, 300), (n+520+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+515+xstep, 380), (n+565+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+515+xstep, 300), (n+560+xstep, 300), 10, "Yellow")
+    canvas.draw_line((n+560+xstep, 295), (n+560+xstep, 340), 10, "Yellow")
+    canvas.draw_line((n+565+xstep, 340), (n+525+xstep, 340), 10, "Yellow")
+    #N
+    canvas.draw_line((n+580+xstep, 300), (n+580+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+580+xstep, 300), (n+615+xstep, 380), 10, "Yellow")
+    canvas.draw_line((n+615+xstep, 380), (n+615+xstep, 300), 10, "Yellow")
+    
+    #circles
+    for c in range(6):
+        canvas.draw_circle((x*c+100, 230), 10, 10, "SpringGreen", "SpringGreen")
+    for c in range(6):
+        canvas.draw_circle((n*c+600, 265), 10, 10, "Violetred", "Violetred")
+    
+    
+
+
+frame = simplegui.create_frame("Thanks", 750, 500)
+frame.set_canvas_background("Mediumblue")
+frame.set_draw_handler(draw)
+
+
+frame.start()
