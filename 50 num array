@@ -1,0 +1,10 @@
+
+import random
+min1 = int(input("Enter the minimum number: "))
+max1 = int(input("Enter the maximum number: "))
+a= []
+
+for x in range (1, 50):
+    a.append(random.randint(min1, max1))
+    
+print(a)
