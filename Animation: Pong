@@ -1,0 +1,46 @@
+import simplegui
+
+width = 500
+height = 500
+counter = 0 
+x = width/2
+y = 100
+xstep = 2
+ystep = 2
+rpy = height/2
+
+def key_handler(key):
+    global rpy
+    if (key==222):
+        rpy=rpy-20
+    if (key==191):
+        rpy=rpy+20
+        
+        
+    
+def draw_handler(canvas):
+    global counter, x, xstep, y, ystep
+    counter = counter + 1
+    y = y + ystep
+    x = x + xstep
+    if (x<=0):
+        xstep = -xstep
+    elif(x>=width-55):
+        xstep = -xstep
+   
+    if (y<=0):
+        ystep = -ystep
+    elif(y>=height):
+        ystep = -ystep
+    
+    canvas.draw_circle((x, y), 10, 10, "White", "White")
+    canvas.draw_line((width-50, rpy+50), (width-50, rpy-50), 
+                     10, "Yellow")
+
+
+frame = simplegui.create_frame("Home", 500, 500)
+frame.set_keydown_handler(key_handler)
+frame.set_draw_handler(draw_handler)
+
+frame.start()
+
