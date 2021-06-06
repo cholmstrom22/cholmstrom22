@@ -1,0 +1,51 @@
+import simplegui
+xstep=3
+bstepy = 2
+x = 0
+    
+
+def draw(canvas):
+    global xstep, bstepy, x
+    x = x+xstep
+    
+    #bubbles
+    canvas.draw_circle((200+x, 260+bstepy), 5, 4, "Black", "White")
+    canvas.draw_circle((300+x+xstep, 293+bstepy), 5, 4, "Black", "White")
+    canvas.draw_circle((380+x+2*xstep, 310+bstepy), 5, 4, "Black", "White")
+        
+    #fish body
+    canvas.draw_polygon([(x+200+xstep, 320), (x+250+xstep, 340), 
+                             (x+200+xstep, 370), (x+100+xstep, 340)], 
+                        5, "Orange", "Yellow")
+    #fin-make polygon
+    canvas.draw_polygon([(x+180+xstep, 325), (x+150+xstep, 300), (x+200+xstep, 320)], 6, "Orange", "Yellow")
+    
+    #fish fins and eye
+    canvas.draw_line((x+100+xstep, 340), (x+30+xstep, 300), 10, "Orange")
+    canvas.draw_line((x+100+xstep, 340), (x+30+xstep, 380), 10, "Orange")
+    canvas.draw_circle((x+200, 340), 2, 2, "Black", "White")
+        
+    
+    
+    bstepy = bstepy - 2
+    
+    #turtle
+#make loop for number of turtles
+    for i in range (4):
+        canvas.draw_polygon([(70+i*200, 140+bstepy), (115+i*200, 175+bstepy), (70+i*200, 213+bstepy), (25+i*200, 175+bstepy)], 6, "mediumseagreen", "mediumseagreen")
+        canvas.draw_polygon([(30+i*200, 175+bstepy), (20+i*200, 165+bstepy), (20+i*200, 167+bstepy)], 20, "seagreen")
+        canvas.draw_polygon([(105+i*200, 175+bstepy), (115+i*200, 165+bstepy), (115+i*200, 167+bstepy)], 20, "seagreen")
+        canvas.draw_circle((70+i*200, 130+bstepy), 20, 6, "seagreen", "seagreen")
+        canvas.draw_line((90+i*200, 195+bstepy), (110+i*200, 235+bstepy), 15, "seagreen")
+        canvas.draw_line((45+i*200, 195+bstepy), (25+i*200, 235+bstepy), 15, "seagreen")
+    
+   #onemoreline
+   #2ifstatements
+
+
+frame = simplegui.create_frame("Home", 750, 500)
+frame.set_canvas_background("blue")
+frame.set_draw_handler(draw)
+
+
+frame.start()
