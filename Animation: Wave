@@ -1,0 +1,34 @@
+import simplegui
+
+w=300
+h=200
+water_lvl=h*0.75
+xstep = 2
+wave_x=0
+
+def draw(canvas):
+    global xstep, wave_x
+    r = 20
+    xoffset = r
+    yoffset = 0
+    n = int(w/(2*r))
+    
+    for i in range (10):
+        if (i%2==0):
+            yoffset = 5
+        else:
+            yoffset = -5
+        
+        
+        canvas.draw_circle((0+xoffset+xstep, water_lvl+yoffset), 20, 1, "blue")
+        xoffset = xoffset + 2*r
+        
+        
+    xstep = xstep + 2
+    canvas.draw_line((0, water_lvl-r/1.7), (w, water_lvl-r/1.7), r+11, "White")
+    
+frame = simplegui.create_frame("Home", w, h)
+frame.set_canvas_background("white")
+frame.set_draw_handler(draw)
+
+frame.start()
