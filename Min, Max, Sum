@@ -1,0 +1,25 @@
+import random
+
+a = []
+n = int(input("How many numbers do you want?"))
+
+for x in range (n):
+    a.append(random.randint(1, 100))
+
+print(a)
+    
+min = 999999
+max = 0 
+sum = 0
+
+for x in a:
+    if (x<min):
+        min = x
+    if (x>max):
+        max = x
+    sum = sum + x
+   
+print(min)
+print(max)
+print(sum/n)
+    
