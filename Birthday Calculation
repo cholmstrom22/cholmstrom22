@@ -1,0 +1,26 @@
+bm = int(input("Enter the month"))
+bday = int(input("Enter the day"))
+
+tm = int(input("Enter today's month"))
+tday = int(input("Enter today's day"))
+
+
+if (tm>bm):
+    print("sorry, we've missed your birthday")
+else: 
+    if (bday<tday):
+        mdiff= bm - tm - 1
+    else: 
+        mdiff = bm - tm
+    if (tm ==1 or tm ==3 or tm == 5 or tm == 7 or tm ==8 or tm == 10 or tm ==12):
+        daysInMonth=31
+    elif (tm == 4 or tm == 6 or tm == 9 or tm ==11):
+        daysInMonth= 30
+    else:
+        daysInMonth = 28
+    
+    ddiff = (daysInMonth-tday) + bday
+    
+    print("Your birthday is " + str(mdiff) + " months and " + str(ddiff) + " days away")
+    
+    
