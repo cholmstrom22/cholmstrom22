@@ -1,0 +1,52 @@
+import random 
+
+def getCard():
+    
+    cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
+    r = random.randint(0, 12)
+    theCard = cards[r]
+    return theCard
+
+def getVal(c):
+    if (c =="J") or (c =="Q") or (c == "K"):
+        v = 10
+    elif (c == "A"):
+        ans = input("Would you like the A to be 1 or 11? Enter 1 for 1")
+        if (ans == "1"):
+            v = 1
+        else:
+            v = 11
+    else:
+        v = c
+        
+    return v 
+
+sum = 0 
+c = getCard()
+print("Card #1: " + str(c))
+sum = sum + getVal(c)
+
+c = getCard()
+print("Card #2: " + str(c))
+sum = sum + getVal(c)
+
+print(sum)
+
+
+
+count = 2
+
+while (True):
+    count = count + 1
+    
+    c = getCard()
+    x = input("Do you want another card? y for yes: ")
+    print("Card #" + str(count) + ": " + str(c))
+    sum = sum + getVal(c)
+    if (x!= "y"):
+        break;
+    if (sum > 21):
+        print("You have gone over 21!")
+        break; 
+    print(sum)
+    
