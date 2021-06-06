@@ -1,0 +1,40 @@
+<html>
+  <body style="background-color:blue">
+    <title>Dolphin Facts</title>
+    <h1 style="text-align:center; color:pink">All About Dolphins!</h1>
+    <p style="text-align:center; color:white; font-family: arial">There are 36 species of marine <b>dolphins</b> - living in nearly all aquatic environments, including oceans, coastal, estuarine and freshwater - and in temperatures ranging from less than 0°C to more than 30°C. In Britain, <b>bottlenose dolphins</b> are concentrated around west Wales and eastern Scotland - with the coasts of Devon and Cornwall also having pods. Scotland is home to the most northerly pod of <b>bottlenose dolphins</b> in the world.</p>
+      <hr>
+      <p style="text-align:center; color:white; font-family: arial">
+     Dolphins range in size from the relatively small 1.7-metre-long (5 ft 7 in) long and 50-kilogram (110-pound) bodied Maui's dolphin to the 9.5 m (31 ft 2 in) and 10-tonne (11-short-ton) killer whale. Dolphins can sometimes leap about 30 feet (9.1 m). Several species of dolphins exhibit sexual dimorphism, in that the males are larger than females. They have streamlined bodies and two limbs that are modified into flippers. Though not quite as flexible as seals, some dolphins can travel at speeds 29 kilometres (18 mi) per hour for short distances.[1] Dolphins use their conical shaped teeth to capture fast-moving prey. They have well-developed hearing which is adapted for both air and water and is so well developed that some can survive even if they are blind. Some species are well adapted for diving to great depths. They have a layer of fat, or blubber, under the skin to keep warm in the cold water.
+      </p>
+  </body>
+  
+    <h2 style="color:pink; border:pink; border-width:5px; border-style:solid; text-align:center">Types of Dolphins</h2>
+    <pre style="color:white; font-size: 12; font-family:arial">
+*Bottlenose dolphin (<mark>Tursiops truncatus</mark>)
+
+*Common dolphin (<mark>Delphinus delphis</mark>)
+
+*Amazon river dolphin (<mark>Inia geoffrensis</mark>)
+
+*Ganges river dolphin (<mark>Platanista gangetica</mark>)
+
+*Commerson’s dolphin (<mark>Cephalorhynchus commersonii</mark>)</pre>
+
+<h3 style="color:pink; border:pink; border-width:5px; border-style:solid; text-align:center">Photo Gallery/Links</h3>
+<a href="https://www.nationalgeographic.com/animals/mammals/facts/dolphins">
+<img src="https://www.americanoceans.org/wp-content/uploads/2021/02/bottlenose-dolphin-2048x1366.jpg" width="150" height="120" align="right" style="color:pink; border:pink; border-width:5px; border-style:dashed; text-align:center">
+</a>
+
+<a href="https://en.wikipedia.org/wiki/Dolphin">
+<img src="https://www.bwallpaperhd.com/wp-content/uploads/2020/03/TenerifeDolphins.jpg" width="200" height="120" align="left" style="color:pink; border:pink; border-width:5px; border-style:dashed; text-align:center">
+</a>
+
+<center>
+<a href="mailto:caitlyn.holmstrom@gmail.com">
+<img src="https://i1.wp.com/kickassfacts.com/wp-content/uploads/2014/01/Albinodolphins_thumb.jpg?resize=300,300" width="150" height="120" style="color:pink; border:pink; border-width:5px; border-style:dashed; text-align:center">
+</a>
+</center>
+
+
+</html>
